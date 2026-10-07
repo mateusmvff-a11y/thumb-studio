@@ -69,3 +69,40 @@ canvas { width: 100%; height: 100%; display: block; }
   .topo { padding: 12px 16px; flex-wrap: wrap; }
   .palco { padding: 16px; }
 }
+
+.msg { font-size: 14px; font-weight: 500; line-height: 1.45; }
+.msg.ok { color: var(--ok); } .msg.erro { color: var(--erro); }
+.msg .cod { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: .04em; color: var(--ink); }
+.linklike { background: none; border: 0; padding: 0; color: var(--ink-dim); text-decoration: underline; cursor: pointer; font: inherit; }
+.meus h3 { font-size: 17px; margin-bottom: 10px; }
+.meus ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.meus li { border: 1px solid var(--line-2); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.meus .t { font-weight: 600; font-size: 14px; line-height: 1.35; }
+.meus .m { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--ink-dim); }
+.badge { font-size: 12.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--cinza-2); color: var(--ink-2); }
+.badge.novo { background: #e8ecef; color: #4a5560; } .badge.em_criacao { background: var(--voce-f); color: var(--voce); }
+.badge.pronto { background: #e3efe6; color: var(--ok); } .badge.cancelado { background: #f5e3e1; color: var(--erro); }
+.meus .nota { font-size: 13px; color: var(--ink-2); }
+.meus .abrir { align-self: flex-start; height: 36px; font-size: 14px; padding: 0 16px; }
+
+.prog { display: flex; flex-direction: column; gap: 6px; }
+.prog-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 13px; color: var(--ink-2); }
+.prog-top b { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 15px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.prog-trilho { height: 8px; border-radius: 999px; background: var(--cinza-2); overflow: hidden; }
+.prog-fill { height: 100%; border-radius: 999px; background: var(--ink); transition: width .6s ease; }
+.prog-fill.ok { background: var(--ok); }
+
+.camadas { list-style: none; border: 1px solid var(--line-2); border-radius: 14px; overflow: hidden; }
+.cam { display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+.cam:last-child { border-bottom: 0; }
+.cam.sel { background: var(--cinza); }
+.cam .nome { flex: 1; text-align: left; background: none; border: 0; padding: 12px 14px; font: 600 15px/1 "Hanken Grotesk", sans-serif; color: var(--ink); cursor: pointer; }
+.cam .olho { background: none; border: 0; padding: 12px 6px 12px 14px; color: var(--ink); cursor: pointer; display: grid; place-items: center; }
+.cam .olho[aria-pressed="false"] { color: var(--ink-dim); opacity: .45; }
+.cam .olho[disabled] { cursor: default; opacity: .35; }
+.props { display: flex; flex-direction: column; gap: 18px; padding-top: 4px; }
+.setas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.setas .btn { height: 40px; padding: 0; font-size: 17px; }
+input[type="range"] { width: 100%; accent-color: var(--ink); }
+.campo > span b { font-weight: 600; color: var(--ink-dim); margin-left: 6px; }
+canvas.arrastavel { cursor: grab; }

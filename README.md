@@ -9,6 +9,14 @@ node server.mjs 5177
 ```
 Abrir http://localhost:5177 (ou clicar em `iniciar.bat`).
 
+## Camadas editáveis (07/10)
+Painel "Camadas": **Título**, **Subtítulo**, **Nome do canal** e **Imagem**, cada uma com o olho (mostrar/esconder).
+- Título: texto (quebra automática; *asteriscos* = destaque), tamanho 60-140% do automático, mover o bloco, cor do destaque, "voltar ao automático".
+- Subtítulo: opcional (liga/desliga ou texto vazio); por padrão termina onde termina a última linha do título; tamanho 60-150%.
+- Nome do canal: texto próprio.
+- Imagem: zoom 100-180%, mover (setas ou arrastar na tela). Os rostos mudam de lugar com a imagem e o texto se reorganiza para não cobri-los; se o ajuste manual passar das regras, aparece o aviso.
+As bases em assets/ são exportadas do PSD SEM título, sub e nome do canal.
+
 ## Como funciona
 - `assets/base-*.jpg` — a cena já tratada (exportada do PSD **sem o título**). A IA gera a cena; o cliente não mexe nela.
 - `thumbs/*.json` — uma thumb: padrão (`thumbnail` ou `live`), cena, texto, cor do destaque e o **layout**:
@@ -26,9 +34,12 @@ Abrir http://localhost:5177 (ou clicar em `iniciar.bat`).
 Texto medido contra o PSD nas 3 thumbs: diferença de 1 a 15 px nas bordas de cada linha (≤ 1%).
 Corpo máximo 265 px; abaixo de 170 px a ferramenta avisa que o texto ficou pequeno.
 
-## Pedido de nova imagem (briefing)
-No painel, "Pedir uma nova imagem": padrão (live/thumbnail), descrição da imagem em 1 linha, quem fica em evidência, texto (opcional) e fotos (opcional).
-"Copiar pedido" gera o texto para colar na conversa com a IA, que cria a cena e a insere como nova thumb (assets/base-*.jpg + thumbs/*.json).
+## Pedido de nova imagem
+No painel, "Pedir uma nova imagem": nome, padrão, descrição em 1 linha, quem fica em evidência, texto (opcional) e até 3 fotos (opcional).
+"Enviar pedido" manda para a função `thumb-pedido` do Supabase do Franzé Studio (código em franzestudio/supabase/functions/thumb-pedido):
+o pedido ganha um código de 8 caracteres, o Mateus recebe e-mail, e o cliente acompanha em "Meus pedidos" (Recebido, Em criação, Pronto).
+Quando fica pronto, aparece o botão "Abrir a thumb". O endereço da função está em config.js (vazio = envio desligado).
+Fila do lado do estúdio: franzestudio/tools/thumb-pedidos.ps1.
 
 ## Falta (próximas fases)
 Login e papéis (Mateus / cliente), versões, fila de pedidos (briefing), preparo automático da cena,

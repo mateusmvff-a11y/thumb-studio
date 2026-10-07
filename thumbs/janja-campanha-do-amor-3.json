@@ -1,0 +1,22 @@
+{
+  "id": "janja-campanha-do-amor-3",
+  "titulo": "Janja e Lula · A CAMPANHA DO AMOR (sem aspas, só DO AMOR em vermelho)",
+  "padrao": "thumbnail",
+  "base": "assets/base-janja-lula.jpg",
+  "texto": "A CAMPANHA\n*DO AMOR*",
+  "layout": {
+    "bordaProt": 1020,
+    "queixoProt": 480,
+    "limiteCorpo": 1700,
+    "topo": 525,
+    "accentWeight": 900,
+    "apoio": {
+      "text": "PRAIA PRIVATIZADA; ESCALA 7x0",
+      "fitLast": true,
+      "weight": 300,
+      "gap": 0.17
+    }
+  },
+  "destaque": "#940000",
+  "referencia": "_ref/ref-janja-v3.jpg"
+}

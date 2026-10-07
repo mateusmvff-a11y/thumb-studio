@@ -26,16 +26,11 @@
       <select id="selThumb"></select>
     </label>
 
-    <label class="campo">
-      <span>Texto da thumb</span>
-      <textarea id="txtCopy" rows="4" spellcheck="false"></textarea>
-      <small>Escreva normalmente: a quebra em linhas é automática. Para escolher o destaque, coloque asteriscos: <b>QUEM VAI GANHAR A *ELEIÇÃO*?</b>. Use Enter só se quiser forçar a quebra.</small>
-    </label>
-
     <div class="campo">
-      <span>Cor do destaque (última linha)</span>
-      <div id="paleta" class="paleta"></div>
+      <span>Camadas</span>
+      <ul id="camadas" class="camadas"></ul>
     </div>
+    <div id="props" class="props"></div>
 
     <div id="aviso" class="aviso" hidden></div>
 
@@ -47,7 +42,11 @@
 
     <details class="pedido" id="pedido">
       <summary>Pedir uma nova imagem</summary>
-      <div class="pedido-corpo">
+      <form class="pedido-corpo" id="formPedido" autocomplete="off">
+        <label class="campo">
+          <span>Seu nome</span>
+          <input id="pdNome" type="text" maxlength="80" placeholder="Para eu saber quem pediu">
+        </label>
         <label class="campo">
           <span>Padrão</span>
           <select id="pdPadrao">
@@ -57,26 +56,31 @@
         </label>
         <label class="campo">
           <span>O que a imagem vai descrever? (1 linha)</span>
-          <input id="pdDescricao" type="text" placeholder="Ex.: Lula e Flávio Bolsonaro frente a frente, com o STF ao fundo">
+          <input id="pdDescricao" type="text" maxlength="400" placeholder="Ex.: Lula e Flávio Bolsonaro frente a frente, com o STF ao fundo" required>
         </label>
         <label class="campo">
           <span>Quem fica em evidência?</span>
-          <input id="pdPessoas" type="text" placeholder="Ex.: Lula (principal) e Flávio Bolsonaro">
+          <input id="pdPessoas" type="text" maxlength="300" placeholder="Ex.: Lula (principal) e Flávio Bolsonaro">
         </label>
         <label class="campo">
           <span>Texto da thumb (opcional)</span>
-          <input id="pdCopy" type="text" placeholder="Deixe em branco para eu sugerir opções">
+          <input id="pdCopy" type="text" maxlength="200" placeholder="Deixe em branco para o estúdio sugerir opções">
         </label>
         <label class="campo">
           <span>Fotos das pessoas (opcional)</span>
           <input id="pdFotos" type="file" accept="image/*" multiple>
-          <small>Anexe só se não houver boa foto no Google. Os nomes dos arquivos vão no pedido.</small>
+          <small>Anexe só se não houver boa foto na internet. Até 3 fotos.</small>
         </label>
-        <button id="btnPedido" class="btn btn-2" type="button">Copiar pedido</button>
-        <small id="pdMsg" class="ok" hidden>Pedido copiado. É só colar na conversa.</small>
-        <pre id="pdPreview" class="pd-preview"></pre>
-      </div>
+        <input id="pdSite" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
+        <button id="btnPedido" class="btn btn-2" type="submit">Enviar pedido</button>
+        <p id="pdMsg" class="msg" hidden></p>
+      </form>
     </details>
+
+    <section class="meus" id="meusPedidos" hidden>
+      <h3>Meus pedidos</h3>
+      <ul id="listaPedidos"></ul>
+    </section>
 
     <label class="chk"><input type="checkbox" id="chkRef"> Comparar com a versão do Photoshop</label>
     <label class="chk"><input type="checkbox" id="chkGuias"> Mostrar áreas livres (rosto)</label>
@@ -87,6 +91,7 @@
   </section>
 </main>
 
+<script src="config.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
