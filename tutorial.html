@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como usar · Thumb Studio</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="tema.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { height: auto; }
+  .topo { position: sticky; top: 0; z-index: 5; }
+  .doc { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  .doc h1 { font-size: clamp(2rem, 5vw, 2.8rem); margin-bottom: 12px; }
+  .doc h2 { font-size: 1.55rem; margin: 56px 0 8px; }
+  .doc h3 { font-size: 1.1rem; margin: 28px 0 6px; }
+  .doc p, .doc li { color: var(--ink-2); }
+  .doc p { margin: 8px 0; }
+  .lede { font-size: 1.1rem; color: var(--ink-dim); }
+  .passos { list-style: none; counter-reset: p; display: flex; flex-direction: column; gap: 14px; margin: 18px 0; padding: 0; }
+  .passos li { counter-increment: p; position: relative; padding: 0 0 0 52px; min-height: 36px; }
+  .passos li::before { content: counter(p); position: absolute; left: 0; top: -2px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--btn); color: var(--btn-txt); font: 600 15px 'Bricolage Grotesque', sans-serif; }
+  .passos b { color: var(--ink); }
+  .caixa { border: 1px solid var(--line-2); border-radius: 16px; padding: 16px 18px; margin: 18px 0; background: var(--cinza); }
+  .caixa p { margin: 4px 0; }
+  .caixa.aviso2 { background: var(--voce-f); border-color: transparent; }
+  .caixa.aviso2 p { color: var(--voce); }
+  code, pre { font-family: 'Hanken Grotesk', sans-serif; font-weight: 500; }
+  pre { background: var(--cinza); border-radius: 12px; padding: 12px 14px; overflow: auto; font-size: 14px; line-height: 1.5; margin: 10px 0; color: var(--ink); }
+  code { background: var(--cinza-2); border-radius: 6px; padding: 1px 6px; font-size: .92em; color: var(--ink); }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--ink-dim); font-weight: 600; font-size: 13px; text-transform: none; }
+  nav.indice { display: flex; gap: 10px; flex-wrap: wrap; margin: 22px 0 8px; }
+  nav.indice a { text-decoration: none; }
+  .tag { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--cinza-2); color: var(--ink-2); margin-right: 6px; }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="marca">Franzé Studio <span>Thumb Studio · Como usar</span></div>
+  <div class="topo-acoes">
+    <span class="tema-topo" data-tema></span>
+    <a class="btn btn-1" href="index.html" style="text-decoration:none">Abrir a ferramenta</a>
+  </div>
+</header>
+
+<main class="doc">
+  <h1>Como usar o Thumb Studio</h1>
+  <p class="lede">Uma ferramenta para pedir a imagem de uma thumb, acompanhar o andamento e, quando ela fica pronta, ajustar o texto e a imagem sem precisar de ninguém.</p>
+  <nav class="indice" aria-label="Seções">
+    <a class="btn btn-2" href="#cliente">Para quem pede</a>
+    <a class="btn btn-2" href="#camadas">Camadas</a>
+    <a class="btn btn-2" href="#regras">Regras do texto</a>
+    <a class="btn btn-2" href="#estudio">Para o estúdio</a>
+    <a class="btn btn-2" href="#problemas">Se algo falhar</a>
+  </nav>
+
+  <h2 id="cliente">Para quem pede a thumb</h2>
+  <h3>1. Pedir uma imagem nova</h3>
+  <ol class="passos">
+    <li>No painel da esquerda, abra <b>Pedir uma nova imagem</b>.</li>
+    <li>Escreva <b>seu nome</b> e escolha o <b>padrão</b>: <i>Thumbnail</i> (preto e branco, destaque vermelho) ou <i>Live</i> (convidados em cor, destaque dourado).</li>
+    <li>Em <b>O que a imagem vai descrever</b>, escreva uma linha. Exemplo: <code>Lula e Flávio Bolsonaro frente a frente, com o STF ao fundo</code>.</li>
+    <li>Em <b>Quem fica em evidência</b>, escreva os nomes. Quem aparece primeiro fica em destaque.</li>
+    <li>O <b>texto da thumb</b> é opcional. Se deixar em branco, o estúdio sugere opções.</li>
+    <li><b>Fotos</b> são opcionais. Anexe só se não houver foto boa na internet (até 3).</li>
+    <li>Clique em <b>Enviar pedido</b>. Você recebe um código de 8 letras. Guarde-o.</li>
+  </ol>
+
+  <h3>2. Acompanhar</h3>
+  <p>Logo abaixo do formulário aparece <b>Meus pedidos</b>, com uma barra de porcentagem. Ela se atualiza sozinha a cada 20 segundos.</p>
+  <table>
+    <tr><th>Etapa</th><th>%</th></tr>
+    <tr><td>Pedido recebido</td><td>10%</td></tr>
+    <tr><td>Buscando as fotos</td><td>25%</td></tr>
+    <tr><td>Gerando a imagem</td><td>45%</td></tr>
+    <tr><td>Tratando a imagem</td><td>70%</td></tr>
+    <tr><td>Montando na ferramenta</td><td>85%</td></tr>
+    <tr><td>Pronta</td><td>100% (a barra fica verde)</td></tr>
+  </table>
+  <p>Quando ficar pronta, aparece o botão <b>Abrir a thumb</b>. É só clicar.</p>
+  <div class="caixa"><p>O pedido fica guardado neste navegador. Se abrir de outro computador, os pedidos não aparecem, mas continuam existindo: fale com o estúdio com o código.</p></div>
+
+  <h3>3. Ajustar e baixar</h3>
+  <ol class="passos">
+    <li>Troque o texto e o que mais precisar (veja <a href="#camadas">Camadas</a>).</li>
+    <li>Confira o aviso amarelo, se aparecer. Ele diz quando o texto ficou pequeno ou perto de um rosto.</li>
+    <li>Clique em <b>Baixar JPG</b>, no canto superior. O arquivo sai em 1920×1080, com o nome <code>2026-10-07 [C] seu texto_THUMB.jpg</code>.</li>
+    <li>O botão <b>Voltar ao original</b> desfaz tudo e volta à versão que o estúdio entregou.</li>
+  </ol>
+
+  <h2 id="camadas">As camadas</h2>
+  <p>No painel há quatro camadas. O <b>olho</b> mostra ou esconde. Clique no nome para editar.</p>
+  <table>
+    <tr><th>Camada</th><th>O que dá para fazer</th></tr>
+    <tr><td><b>Título</b></td><td>Trocar o texto, marcar o destaque com asteriscos, aumentar ou diminuir (60% a 140%), mover o bloco, trocar a cor do destaque, voltar ao automático.</td></tr>
+    <tr><td><b>Subtítulo</b></td><td>Opcional. Ligue ou desligue com o olho. Por padrão termina onde termina a última linha do título. Dá para ajustar o tamanho.</td></tr>
+    <tr><td><b>Nome do canal</b></td><td>O texto pequeno no canto superior esquerdo. Dá para esconder ou trocar.</td></tr>
+    <tr><td><b>Imagem</b></td><td>Zoom de 100% a 180%. Mova com as setas ou arrastando a imagem na tela.</td></tr>
+  </table>
+  <div class="caixa">
+    <p><b>Destaque com asteriscos.</b> Escreva <code>A CAMPANHA *DO AMOR*</code> e o que está entre os asteriscos vira a última linha, na cor de destaque.</p>
+    <p><b>Quebra manual.</b> Aperte Enter para forçar a quebra de linha. Os asteriscos funcionam em qualquer linha.</p>
+    <p><b>Ver as áreas dos rostos.</b> Marque “Mostrar áreas livres (rosto)”. A área azul é onde o texto não deve entrar.</p>
+  </div>
+
+  <h2 id="regras">Regras que a ferramenta segue sozinha</h2>
+  <ul>
+    <li>O texto <b>nunca cobre o rosto</b> do personagem principal. Ele pode passar por baixo do queixo.</li>
+    <li>O título usa o <b>maior tamanho possível</b> dentro dessa regra, em até 3 linhas, em letra caixa-alta.</li>
+    <li>As duas primeiras linhas ficam em <b>Light branco</b> e a última em <b>Black</b>, na cor do destaque.</li>
+    <li>A base do texto fica sempre alinhada na mesma altura, com a mesma margem da esquerda.</li>
+    <li>Se você pedir mais do que as regras permitem, aparece o aviso. Dá para ignorar, mas o texto pode cobrir um rosto.</li>
+    <li>Abaixo de 170 px de corpo, a ferramenta avisa que o texto ficou pequeno para ler no celular.</li>
+  </ul>
+
+  <h2 id="estudio">Para o estúdio</h2>
+  <p>Este é o caminho de um pedido, do lado de quem produz a imagem.</p>
+  <ol class="passos">
+    <li><b>Chega o pedido.</b> Um e-mail “Novo pedido de thumb” avisa. Para ver a fila: <pre>powershell -ExecutionPolicy Bypass -File tools\thumb-pedidos.ps1</pre></li>
+    <li><b>Marcar que começou.</b> <pre>powershell -ExecutionPolicy Bypass -File tools\thumb-pedidos.ps1 -Codigo CODIGO -Status em_criacao -Progresso 25 -Etapa "Buscando as fotos"</pre></li>
+    <li><b>Criar a cena.</b> Foto das pessoas, geração no Gemini com o enquadramento do padrão, tratamento no Photoshop (nitidez leve, protagonista em cor e fundo em preto e branco no padrão thumbnail).</li>
+    <li><b>Exportar a base sem texto.</b> Salvar em <code>assets/base-nome.jpg</code> com título, subtítulo e nome do canal escondidos.</li>
+    <li><b>Registrar a thumb.</b> Criar <code>thumbs/nome.json</code> com a base, o texto sugerido e as medidas dos rostos, e incluir o nome em <code>thumbs/index.json</code>.</li>
+    <li><b>Publicar.</b> <pre>git add -A
+git commit -m "Nova thumb: nome"
+git push</pre> O site atualiza em cerca de 1 minuto.</li>
+    <li><b>Entregar.</b> <pre>powershell -ExecutionPolicy Bypass -File tools\thumb-pedidos.ps1 -Codigo CODIGO -Status pronto -ThumbId nome -Nota "Pronto! Pode ajustar o texto."</pre> A barra do cliente vai a 100% e aparece o botão “Abrir a thumb”.</li>
+  </ol>
+  <div class="caixa aviso2"><p><b>Cuidado com o Gemini.</b> O botão “Baixar no tamanho original” refaz a imagem e pode mudar os rostos. Use a imagem como aparece no chat e amplie com o Real-ESRGAN (<code>node tools/upscale-ia.mjs</code>).</p></div>
+  <table>
+    <tr><th>Status</th><th>Quando usar</th></tr>
+    <tr><td><span class="tag">novo</span></td><td>Pedido recebido.</td></tr>
+    <tr><td><span class="tag">em_criacao</span></td><td>Em produção, com <code>-Progresso</code> de 0 a 100.</td></tr>
+    <tr><td><span class="tag">pronto</span></td><td>Exige <code>-ThumbId</code>. Leva a barra a 100%.</td></tr>
+    <tr><td><span class="tag">cancelado</span></td><td>Pedido descartado. Use <code>-Nota</code> para explicar.</td></tr>
+  </table>
+
+  <h2 id="problemas">Se algo falhar</h2>
+  <table>
+    <tr><th>Sintoma</th><th>O que fazer</th></tr>
+    <tr><td>“Não consegui enviar agora”</td><td>Tente de novo em instantes. Se persistir, use “Copiar o texto do pedido” e mande por outro canal.</td></tr>
+    <tr><td>“Muitos pedidos em pouco tempo”</td><td>O limite é de 8 pedidos por hora por pessoa.</td></tr>
+    <tr><td>O texto está pequeno demais</td><td>Encurte a frase (até 3 palavras por linha) ou desligue o subtítulo.</td></tr>
+    <tr><td>O texto passou do rosto</td><td>Clique em “Voltar ao automático” na camada Título.</td></tr>
+    <tr><td>Os pedidos sumiram da tela</td><td>Eles ficam no navegador que fez o pedido. Fale com o estúdio com o código.</td></tr>
+    <tr><td>A tela está clara demais ou escura demais</td><td>Use o botão de sol e lua no topo. A ferramenta sempre abre no claro.</td></tr>
+  </table>
+</main>
+</body>
+</html>

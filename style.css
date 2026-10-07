@@ -7,6 +7,17 @@
   --btn: #0e0e0e; --btn-txt: #fff; --btn-hover: #3a3d3c;
   --voce: #8a5a12; --voce-f: #f6ecd9; --ok: #2f6b45; --erro: #9b2c24;
   --campo: #fff;
+  --ok-f: #e3efe6; --espera: #4a5560; --espera-f: #e8ecef; --erro-f: #f5e3e1; --sombra: rgba(0,0,0,.14); --palco: var(--cinza);
+}
+/* MODO ESCURO: o tema.js poe data-theme no <html>; a ferramenta sempre abre no claro e o escuro vale até fechar a aba. */
+:root[data-theme="dark"] {
+  --bg: #171a19; --ink: #ecede9; --ink-2: #d3d6cf; --ink-dim: #a3a59e;
+  --line: rgba(236,237,233,.12); --line-2: rgba(236,237,233,.26);
+  --cinza: #212524; --cinza-2: #2a2f2d; --grafite: #2b302e; --salvia: #9fae9a;
+  --btn: #ecede9; --btn-txt: #111312; --btn-hover: #cfd3cc;
+  --voce: #e5bb73; --voce-f: #3a2f1c; --ok: #8fcaa2; --ok-f: #20352a; --erro: #f08a82; --erro-f: #3a2220;
+  --espera: #b5c1cc; --espera-f: #28303a; --campo: #1c201e; --sombra: rgba(0,0,0,.4);
+  color-scheme: dark;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-font-smoothing: antialiased; }
@@ -60,7 +71,7 @@ input[type="file"] { font: 400 13px 'Hanken Grotesk', sans-serif; color: var(--i
 .ok { color: var(--ok); font-weight: 500; }
 
 .palco { display: grid; place-items: center; padding: 28px; overflow: auto; background: var(--cinza); }
-.moldura { width: 100%; max-width: 1280px; aspect-ratio: 16/9; background: #000; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,.14); }
+.moldura { width: 100%; max-width: 1280px; aspect-ratio: 16/9; background: #000; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 40px var(--sombra); }
 canvas { width: 100%; height: 100%; display: block; }
 
 @media (max-width: 860px) {
@@ -80,8 +91,8 @@ canvas { width: 100%; height: 100%; display: block; }
 .meus .t { font-weight: 600; font-size: 14px; line-height: 1.35; }
 .meus .m { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--ink-dim); }
 .badge { font-size: 12.5px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--cinza-2); color: var(--ink-2); }
-.badge.novo { background: #e8ecef; color: #4a5560; } .badge.em_criacao { background: var(--voce-f); color: var(--voce); }
-.badge.pronto { background: #e3efe6; color: var(--ok); } .badge.cancelado { background: #f5e3e1; color: var(--erro); }
+.badge.novo { background: var(--espera-f); color: var(--espera); } .badge.em_criacao { background: var(--voce-f); color: var(--voce); }
+.badge.pronto { background: var(--ok-f); color: var(--ok); } .badge.cancelado { background: var(--erro-f); color: var(--erro); }
 .meus .nota { font-size: 13px; color: var(--ink-2); }
 .meus .abrir { align-self: flex-start; height: 36px; font-size: 14px; padding: 0 16px; }
 
@@ -106,3 +117,6 @@ canvas { width: 100%; height: 100%; display: block; }
 input[type="range"] { width: 100%; accent-color: var(--ink); }
 .campo > span b { font-weight: 600; color: var(--ink-dim); margin-left: 6px; }
 canvas.arrastavel { cursor: grab; }
+
+.topo-acoes { align-items: center; }
+.tema-topo { display: flex; color: var(--ink-dim); }
