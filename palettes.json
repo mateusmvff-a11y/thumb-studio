@@ -1,0 +1,14 @@
+{
+  "thumbnail": [
+    { "nome": "Vermelho", "hex": "#940000" },
+    { "nome": "Vermelho vivo", "hex": "#C1121F" },
+    { "nome": "Dourado", "hex": "#C29B50" },
+    { "nome": "Branco", "hex": "#FFFFFF" }
+  ],
+  "live": [
+    { "nome": "Dourado", "hex": "#C29B50" },
+    { "nome": "Branco", "hex": "#FFFFFF" },
+    { "nome": "Vermelho", "hex": "#940000" },
+    { "nome": "Azul gelo", "hex": "#9EC5E8" }
+  ]
+}

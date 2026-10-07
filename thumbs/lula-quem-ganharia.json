@@ -1,0 +1,10 @@
+{
+  "id": "lula-quem-ganharia",
+  "titulo": "Lula e Flávio · Quem ganharia as eleições?",
+  "padrao": "thumbnail",
+  "base": "assets/base-lula-flavio.jpg",
+  "referencia": "_ref/ref-lula-quem-ganharia.jpg",
+  "texto": "QUEM\nGANHARIA\nAS ELEIÇÕES?",
+  "layout": { "bordaProt": 1278, "queixoProt": 640, "limiteCorpo": 1800, "topo": 260, "accentWeight": 900 },
+  "destaque": "#940000"
+}

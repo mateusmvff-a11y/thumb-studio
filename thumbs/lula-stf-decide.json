@@ -1,0 +1,10 @@
+{
+  "id": "lula-stf-decide",
+  "titulo": "Lula e Flávio · STF decide a eleição?",
+  "padrao": "thumbnail",
+  "base": "assets/base-lula-flavio.jpg",
+  "referencia": "_ref/ref-stf.jpg",
+  "texto": "STF\nDECIDE A\nELEIÇÃO?",
+  "layout": { "bordaProt": 1278, "queixoProt": 640, "limiteCorpo": 1700, "topo": 300, "accentWeight": 900 },
+  "destaque": "#940000"
+}

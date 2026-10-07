@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thumb Studio · Franzé Studio</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <div class="marca">Franzé Studio <span>Thumb Studio · Luís Ernesto Lacombe</span></div>
+  <div class="topo-acoes">
+    <button id="btnReset" class="btn btn-2" type="button">Voltar ao original</button>
+    <button id="btnBaixar" class="btn btn-1" type="button">Baixar JPG</button>
+  </div>
+</header>
+
+<main class="app">
+  <aside class="painel">
+    <label class="campo">
+      <span>Thumb</span>
+      <select id="selThumb"></select>
+    </label>
+
+    <label class="campo">
+      <span>Texto da thumb</span>
+      <textarea id="txtCopy" rows="4" spellcheck="false"></textarea>
+      <small>Escreva normalmente: a quebra em linhas é automática. Para escolher o destaque, coloque asteriscos: <b>QUEM VAI GANHAR A *ELEIÇÃO*?</b>. Use Enter só se quiser forçar a quebra.</small>
+    </label>
+
+    <div class="campo">
+      <span>Cor do destaque (última linha)</span>
+      <div id="paleta" class="paleta"></div>
+    </div>
+
+    <div id="aviso" class="aviso" hidden></div>
+
+    <dl class="info">
+      <dt>Padrão</dt><dd id="infoPadrao"></dd>
+      <dt>Corpo do texto</dt><dd id="infoCorpo"></dd>
+      <dt>Linhas</dt><dd id="infoLinhas"></dd>
+    </dl>
+
+    <details class="pedido" id="pedido">
+      <summary>Pedir uma nova imagem</summary>
+      <div class="pedido-corpo">
+        <label class="campo">
+          <span>Padrão</span>
+          <select id="pdPadrao">
+            <option value="thumbnail">Thumbnail (vermelho, P&amp;B)</option>
+            <option value="live">Live (dourado, convidados em cor)</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span>O que a imagem vai descrever? (1 linha)</span>
+          <input id="pdDescricao" type="text" placeholder="Ex.: Lula e Flávio Bolsonaro frente a frente, com o STF ao fundo">
+        </label>
+        <label class="campo">
+          <span>Quem fica em evidência?</span>
+          <input id="pdPessoas" type="text" placeholder="Ex.: Lula (principal) e Flávio Bolsonaro">
+        </label>
+        <label class="campo">
+          <span>Texto da thumb (opcional)</span>
+          <input id="pdCopy" type="text" placeholder="Deixe em branco para eu sugerir opções">
+        </label>
+        <label class="campo">
+          <span>Fotos das pessoas (opcional)</span>
+          <input id="pdFotos" type="file" accept="image/*" multiple>
+          <small>Anexe só se não houver boa foto no Google. Os nomes dos arquivos vão no pedido.</small>
+        </label>
+        <button id="btnPedido" class="btn btn-2" type="button">Copiar pedido</button>
+        <small id="pdMsg" class="ok" hidden>Pedido copiado. É só colar na conversa.</small>
+        <pre id="pdPreview" class="pd-preview"></pre>
+      </div>
+    </details>
+
+    <label class="chk"><input type="checkbox" id="chkRef"> Comparar com a versão do Photoshop</label>
+    <label class="chk"><input type="checkbox" id="chkGuias"> Mostrar áreas livres (rosto)</label>
+  </aside>
+
+  <section class="palco">
+    <div class="moldura"><canvas id="tela" width="1920" height="1080"></canvas></div>
+  </section>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "id": "live-augusto-nunes",
+  "titulo": "Live · Lacombe e Augusto Nunes",
+  "padrao": "live",
+  "base": "assets/base-live-augusto.jpg",
+  "referencia": "_ref/ref-live-augusto.jpg",
+  "texto": "QUEM VAI\nGANHAR A\nELEIÇÃO?",
+  "layout": { "bordaProt": 1172, "queixoProt": 525, "limiteCorpo": 1182, "topo": 300, "accentWeight": 800 },
+  "destaque": "#C29B50"
+}
