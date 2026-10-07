@@ -308,4 +308,36 @@ async function atualizaPedidos() {
 }
 mostraPedidos(); atualizaPedidos();
 setInterval(() => { if (!document.hidden && lerLS().some((p) => p.status === 'novo' || p.status === 'em_criacao')) atualizaPedidos(); }, 20000);
+
+// ---- Passo a passo guiado (mesmo componente do portal do Franzé Studio) ----
+const GUIA_CHAVE = "ts-tour-v1";
+function iniciaGuia(forcar) {
+  if (!window.FZTour) return;
+  $("pedido").open = true;
+  state.sel = "titulo"; camadas();
+  const P = [
+    { alvo: null, largo: true, titulo: "Bem-vindo ao Thumb Studio", texto: "Aqui você pede a imagem de uma thumb, acompanha o andamento e ajusta o texto quando ela fica pronta. São poucos passos, cada um mostra o que clicar." },
+    { alvo: "#pedido", titulo: "Comece pelo pedido", texto: "Tudo começa em “Pedir uma nova imagem”. É este bloco que você preenche para o estúdio criar a imagem." },
+    { alvo: "#pdPadrao", titulo: "Escolha o padrão", texto: "Thumbnail é preto e branco com destaque vermelho. Live tem os convidados em cor e destaque dourado." },
+    { alvo: "#pdDescricao", titulo: "Descreva em uma linha", texto: "Diga o que a imagem mostra. Exemplo: Lula e Flávio Bolsonaro frente a frente, com o STF ao fundo." },
+    { alvo: "#pdPessoas", titulo: "Quem fica em evidência", texto: "Escreva os nomes. A primeira pessoa é a principal e aparece maior." },
+    { alvo: "#pdFotos", titulo: "Foto é opcional", texto: "Anexe uma foto só se não houver uma boa na internet. Pode mandar até 3." },
+    { alvo: "#btnPedido", titulo: "Envie o pedido", texto: "Ao enviar, você recebe um código de 8 letras e o estúdio é avisado na hora. Guarde o código." },
+    { alvo: null, titulo: "Acompanhe o andamento", texto: "Depois do envio aparece “Meus pedidos”, com uma barra de porcentagem: recebido, gerando a imagem, tratando, pronto. Quando chegar a 100%, aparece o botão “Abrir a thumb”." },
+    { alvo: "#camadas", titulo: "As camadas", texto: "A thumb é feita de camadas: Título, Subtítulo, Nome do canal e Imagem. O olho mostra ou esconde. Clique no nome para editar." },
+    { alvo: "#props", titulo: "Ajuste a camada escolhida", texto: "No Título: troque o texto, o tamanho, a posição e a cor do destaque. Em Imagem: zoom e mover. O texto se reorganiza sozinho para não cobrir os rostos." },
+    { alvo: ".moldura", titulo: "A prévia é o resultado", texto: "O que você vê aqui é exatamente o que será baixado. Marque “Mostrar áreas livres” para ver onde o texto não pode entrar." },
+    { alvo: "#btnBaixar", titulo: "Baixe o JPG", texto: "O arquivo sai em 1920×1080, com o nome no padrão do estúdio. Para desfazer tudo, use “Voltar ao original”." },
+    { alvo: "#btnTour", titulo: "Para rever", texto: "Clique em “Passo a passo” quando quiser ver isto de novo. O “Guia completo” explica cada detalhe." },
+  ];
+  FZTour.iniciar({
+    passos: P, chave: GUIA_CHAVE, forcar,
+    rotulos: { de: "de", proximo: "Próximo", voltar: "Voltar", pular: "Pular", fim: "Entendi", idioma: "Idioma" },
+    aoFim: () => { $("pedido").open = false; },
+  });
+  if (!document.querySelector(".fzt-veu")) $("pedido").open = false;
+}
+$("btnTour").addEventListener("click", () => iniciaGuia(true));
+setTimeout(() => iniciaGuia(false), 900);
+
 window.__ts = { render, state };
