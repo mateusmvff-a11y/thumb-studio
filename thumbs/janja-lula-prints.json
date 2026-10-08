@@ -1,0 +1,15 @@
+{
+    "id":  "janja-lula-prints",
+    "titulo":  "Janja e Lula - A milícia digital (opção 1) (pedido C6D2JPR6)",
+    "padrao":  "thumbnail",
+    "base":  "assets/base-janja-lula-prints.jpg",
+    "texto":  "A MILÍCIA\n*DIGITAL*",
+    "layout":  {
+                   "bordaProt":  1330,
+                   "queixoProt":  480,
+                   "limiteCorpo":  1700,
+                   "topo":  525,
+                   "accentWeight":  900
+               },
+    "destaque":  "#940000"
+}

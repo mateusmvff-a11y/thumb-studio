@@ -1,0 +1,15 @@
+{
+    "id":  "janja-lula-prints-2",
+    "titulo":  "Janja e Lula - O mesmo texto em 100 perfis (opção 2) (pedido C6D2JPR6)",
+    "padrao":  "thumbnail",
+    "base":  "assets/base-janja-lula-prints.jpg",
+    "texto":  "O MESMO TEXTO\n*EM 100 PERFIS*",
+    "layout":  {
+                   "bordaProt":  1330,
+                   "queixoProt":  480,
+                   "limiteCorpo":  1700,
+                   "topo":  525,
+                   "accentWeight":  900
+               },
+    "destaque":  "#940000"
+}

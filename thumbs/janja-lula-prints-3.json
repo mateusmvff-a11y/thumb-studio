@@ -1,0 +1,15 @@
+{
+    "id":  "janja-lula-prints-3",
+    "titulo":  "Janja e Lula - A enxurrada de posts (opção 3) (pedido C6D2JPR6)",
+    "padrao":  "thumbnail",
+    "base":  "assets/base-janja-lula-prints.jpg",
+    "texto":  "A ENXURRADA\n*DE POSTS*",
+    "layout":  {
+                   "bordaProt":  1330,
+                   "queixoProt":  480,
+                   "limiteCorpo":  1700,
+                   "topo":  525,
+                   "accentWeight":  900
+               },
+    "destaque":  "#940000"
+}
