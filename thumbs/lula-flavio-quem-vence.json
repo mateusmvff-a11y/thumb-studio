@@ -1,0 +1,15 @@
+{
+  "id": "lula-flavio-quem-vence",
+  "titulo": "Lula e Flavio Bolsonaro - QUEM VENCE A ELEICAO? (pedido MVF7TWAQ)",
+  "padrao": "thumbnail",
+  "base": "assets/base-lula-flavio-2.jpg",
+  "texto": "QUEM VENCE\n*A ELEIÇÃO?*",
+  "layout": {
+    "bordaProt": 1096,
+    "queixoProt": 740,
+    "limiteCorpo": 1700,
+    "topo": 260,
+    "accentWeight": 900
+  },
+  "destaque": "#940000"
+}
